@@ -1,0 +1,24 @@
+{
+  "name": "discord-crm-bot",
+  "version": "1.0.0",
+  "description": "The discord bot collects server events for statistical purposes",
+  "main": "main.js",
+  "scripts": {
+    "listen": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youn-T/Discord-CRM-BOT.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "stats"
+  ],
+  "author": "Gandulfe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Youn-T/Discord-CRM-BOT/issues"
+  },
+  "homepage": "https://github.com/Youn-T/Discord-CRM-BOT#readme"
+}

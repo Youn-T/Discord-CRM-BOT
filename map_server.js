@@ -26,39 +26,17 @@ function getNextMessages(channel, message_id) {
         if (messages.size == 0) return
         getNextMessages(channel, messages.last().id)
     });
-    // client.channels.cache.get("1299276212757200947").
 }
 
 client.once(Events.ClientReady, readyClient => {
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
     console.log(client.guilds)
-    const server_id = '1145408283872596008'
-    var before = ""
     const channels = client.guilds.cache.get('1145408283872596008').channels.cache.filter(chan => chan.type == 0)
 
     channels.forEach(channel => {
         console.log(channel.name)
         getNextMessages(channel, "1378088404163625062")
     })
-
-
-
-    // client.channels.cache.get("1299276212757200947").messages.fetch({ limit: 100, before: "1378088404163625062" }).then(messages => {
-    //     console.log(`Received ${messages.size} messages`);
-    //     messages.forEach(message => console.log(message.content));
-    // });
-
-    // client.guilds.cache.get(server_id).channels.cache.forEach((channel) => {
-    //     channel.fetch( { limit: 100} ).then(messages => {
-    //         console.log(`Received ${messages.size} messages`);
-    //         messages.forEach(message => console.log(message.content));
-    //     });
-    // })
-    // const channel = client.channels.cache.get('<channel id>');
-    // channel.messages.fetch({ limit: 100 }).then(messages => {
-    //     console.log(`Received ${messages.size} messages`);
-    //     messages.forEach(message => console.log(message.content));
-    // });
 });
 
 
